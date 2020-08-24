@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Gilroy';
+  src:  url('./assets/fonts/gilroy.woff') format('woff2'),
+        url('./assets/fonts/gilroy2.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy-bold';
+  src:  url('./assets/fonts/gilroyextrabold.woff') format('woff2'),
+        url('./assets/fonts/gilroyextrabold2.woff2') format('woff');
+}
+
+body {
+  font-family: Gilroy;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
