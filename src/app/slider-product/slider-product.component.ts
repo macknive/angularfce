@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-product.component.scss']
 })
 export class SliderProductComponent implements OnInit {
+
   slides = [
     {img: "../../assets/images/1.jpg"},
     {img: "../../assets/images/2.jpg"},
@@ -52,7 +53,14 @@ export class SliderProductComponent implements OnInit {
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.slider-nav',
-    arrows: true
+    arrows: false
+  };
+
+  slideConfigPrice = {
+    slidesToShow: 3,
+    arrows: false,
+    loop: false,
+    infinite: false
   };
   
   slickInit(e) {
