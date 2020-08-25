@@ -14,21 +14,14 @@ import { SliderMoreChoicesComponent } from './slider-more-choices/slider-more-ch
 import { SliderHotSellingComponent } from './slider-hot-selling/slider-hot-selling.component';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import { FooterComponent } from './footer/footer.component';
 
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 4,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar'
-  },
-};
+
+import { FooterComponent } from './footer/footer.component';
+import { SliderProductComponent } from './slider-product/slider-product.component';
+
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+
 
 @NgModule({
   declarations: [
@@ -42,19 +35,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SliderMoreChoicesComponent,
     SliderHotSellingComponent,
     FooterComponent,
+    SliderProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    SlickCarouselModule
   ],
-  providers: [
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
-  ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }

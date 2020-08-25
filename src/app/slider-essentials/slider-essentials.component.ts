@@ -7,7 +7,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./slider-essentials.component.scss']
 })
 export class SliderEssentialsComponent implements OnInit {
-  public config: SwiperConfigInterface = {
+    public config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
     slidesPerView: 4,
