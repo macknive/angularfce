@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-slider-new-arrival',
@@ -7,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderNewArrivalComponent implements OnInit {
 
+  public config: SwiperConfigInterface = {
+    a11y: true,
+    direction: 'horizontal',
+    slidesPerView: 4,
+    keyboard: true,
+    mousewheel: true,
+    scrollbar: true,
+    navigation: true,
+    pagination: false
+  };
+  
   constructor() { }
 
   ngOnInit(): void {
