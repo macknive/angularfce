@@ -16,21 +16,22 @@ export class SliderProductComponent implements OnInit {
 
   ];
   slideConfig = {
+    focusOnSelect: true,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
+    infinite: false,
     arrows: false,
+    loop: false,
     asNavFor: '.slider-for',
-    focusOnSelect: true
   };
 
   slideConfigSingle = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
     asNavFor: '.slider-nav',
-    draggable:true
+    arrows: true
   };
   
   slickInit(e) {

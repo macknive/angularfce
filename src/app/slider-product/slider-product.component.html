@@ -4,9 +4,24 @@
       <div class="row">
 
         <div class="col-1"><br>
-          <ngx-slick-carousel class="carousel slider-nav" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-              <img src="{{ slide.img }}" alt="">
+          <ngx-slick-carousel class="carousel slider-nav" #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/1.jpg" alt="" class="prodimage">
+            </div>
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/2.jpg" alt="" class="prodimage">
+            </div>
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/3.jpg" alt="" class="prodimage">
+            </div>
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/4.jpg" alt="" class="prodimage">
+            </div>
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/5.jpg" alt="" class="prodimage">
+            </div>
+            <div ngxSlickItem class="slide">
+              <img src="../../assets/images/6.jpg" alt="" class="prodimage">
             </div>
           </ngx-slick-carousel>
         </div>   
