@@ -1,32 +1,18 @@
-<div class="container" style="max-width: 1800px">
+<div class="container" style="max-width: 1800px; max-height: 500px;">
   <div class="card">
     <div class="card-body shadow">
+ 
       <div class="row">
 
-        <div class="col-1"><br>
-          <ngx-slick-carousel class="carousel slider-nav" #slickModal="slick-carousel" [config]="slideConfig">
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/1.jpg" alt="" class="prodimage">
-            </div>
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/2.jpg" alt="" class="prodimage">
-            </div>
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/3.jpg" alt="" class="prodimage">
-            </div>
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/4.jpg" alt="" class="prodimage">
-            </div>
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/5.jpg" alt="" class="prodimage">
-            </div>
-            <div ngxSlickItem class="slide">
-              <img src="../../assets/images/6.jpg" alt="" class="prodimage">
+        <div class="col-sm-1">
+          <ngx-slick-carousel class="carousel slider-nav" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="" width="100%">
             </div>
           </ngx-slick-carousel>
         </div>   
         
-        <div class="col-4">
+        <div class="col-sm-4">
           <ngx-slick-carousel class="carousel slider-for" #slickModal="slick-carousel" [config]="slideConfigSingle" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <img src="{{ slide.img }}" alt="" width="100%">
@@ -34,7 +20,7 @@
           </ngx-slick-carousel>
         </div> 
 
-        <div class="col-7">
+        <div class="col-xl-7">
           <h3>DHL Stock Free Shopping X6 tws Wireless Headphone Bluetooth Earphone Sport Earphones Wireless Ear Buds Bass for Xiaomi Huawei Samsung</h3><br><br>
             <div class="p-2">Flex item 1</div>
             <div class="p-2">Flex item 2</div>
@@ -48,5 +34,7 @@
 
       </div>
     </div>
+
   </div>
 </div>
+

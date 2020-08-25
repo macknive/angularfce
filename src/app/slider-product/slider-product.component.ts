@@ -15,16 +15,37 @@ export class SliderProductComponent implements OnInit {
     {img: "../../assets/images/6.jpg"},
 
   ];
+  
   slideConfig = {
+    autoplay: true,
+    autoplaySpeed: 2000,
     focusOnSelect: true,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     vertical: true,
     verticalSwiping: true,
-    infinite: false,
+    infinite: true,
     arrows: false,
-    loop: false,
+    loop: true,
     asNavFor: '.slider-for',
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      }
+    ]
   };
 
   slideConfigSingle = {
