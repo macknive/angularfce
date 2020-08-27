@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-slider-product',
   templateUrl: './slider-product.component.html',
@@ -18,18 +19,20 @@ export class SliderProductComponent implements OnInit {
   ];
   
   slideConfig = {
-    autoplay: true,
-    autoplaySpeed: 2000,
+    asNavFor: '.slider-for',
     focusOnSelect: true,
     slidesToShow: 4,
     slidesToScroll: 2,
     vertical: true,
     verticalSwiping: true,
+    //autoplay: true,
+    //autoplaySpeed: 2000,
+    //adaptiveHeight: true,
     infinite: true,
-    arrows: false,
+    //arrows: false,
     loop: true,
-    asNavFor: '.slider-for',
-    responsive: [
+    //draggable: false,
+    /*responsive: [
       {
         breakpoint: 1500,
         settings: {
@@ -46,7 +49,7 @@ export class SliderProductComponent implements OnInit {
           autoplaySpeed: 2000,
         }
       }
-    ]
+    ]*/
   };
 
   slideConfigSingle = {

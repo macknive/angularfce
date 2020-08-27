@@ -1,4 +1,4 @@
-<div class="container" style="max-width: 1800px; max-height: 500px;">
+<div class="container" style="max-width: 1800px">
   <div class="card">
     <div class="card-body shadow">
  
@@ -10,7 +10,7 @@
               <img src="{{ slide.img }}" alt="" width="100%">
             </div>
           </ngx-slick-carousel>
-        </div>   
+        </div> 
         
         <div class="col-sm-4">
           <ngx-slick-carousel class="carousel slider-for" #slickModal="slick-carousel" [config]="slideConfigSingle" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
@@ -139,4 +139,6 @@
 
   </div>
 </div>
+
+
 
